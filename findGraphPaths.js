@@ -8,19 +8,6 @@ const edges = {
   f: ['h'],
   g: ['h']
 };
-//initialize vertex
-Object.keys(stations).forEach(vertex => {
-  vertices.push(vertex);
-  edges[vertex] = [];
-});
-Object.keys(lines).forEach(lineKey => {
-  const {color, name, route} = lines[lineKey];
-  route.reduce((from, to) => {
-    edges[from].push(to);
-    edges[to].push(from);
-    return to;
-  });
-});
 
 const pathFromTo = (source, destination) => {
   debugger;
