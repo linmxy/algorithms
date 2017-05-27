@@ -10,7 +10,6 @@ const edges = {
 };
 
 const pathFromTo = (source, destination) => {
-  debugger;
   if (!vertices.indexOf(destination)) {
     return console.log('Vertex not found');
   }
